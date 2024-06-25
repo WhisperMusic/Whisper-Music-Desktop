@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\honor magicbook\\Desktop\\Whisper Music\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{877D3E6D-CDD8-4CAF-8BE0-56ED8FCA3C21}|Whisper Music.csproj|c:\\users\\honor magicbook\\desktop\\whisper music\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{877D3E6D-CDD8-4CAF-8BE0-56ED8FCA3C21}|Whisper Music.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{877D3E6D-CDD8-4CAF-8BE0-56ED8FCA3C21}|Whisper Music.csproj|C:\\Users\\honor magicbook\\Desktop\\Whisper Music\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{877D3E6D-CDD8-4CAF-8BE0-56ED8FCA3C21}|Whisper Music.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{877D3E6D-CDD8-4CAF-8BE0-56ED8FCA3C21}|Whisper Music.csproj|C:\\Users\\honor magicbook\\Desktop\\Whisper Music\\animations\\animextentions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{877D3E6D-CDD8-4CAF-8BE0-56ED8FCA3C21}|Whisper Music.csproj|solutionrelative:animations\\animextentions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{877D3E6D-CDD8-4CAF-8BE0-56ED8FCA3C21}|Whisper Music.csproj|C:\\Users\\honor magicbook\\Desktop\\Whisper Music\\models\\backend\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{877D3E6D-CDD8-4CAF-8BE0-56ED8FCA3C21}|Whisper Music.csproj|solutionrelative:models\\backend\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Server.cs",
+              "DocumentMoniker": "C:\\Users\\honor magicbook\\Desktop\\Whisper Music\\Models\\Backend\\Server.cs",
+              "RelativeDocumentMoniker": "Models\\Backend\\Server.cs",
+              "ToolTip": "C:\\Users\\honor magicbook\\Desktop\\Whisper Music\\Models\\Backend\\Server.cs",
+              "RelativeToolTip": "Models\\Backend\\Server.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T20:28:28.505Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AnimExtentions.cs",
+              "DocumentMoniker": "C:\\Users\\honor magicbook\\Desktop\\Whisper Music\\Animations\\AnimExtentions.cs",
+              "RelativeDocumentMoniker": "Animations\\AnimExtentions.cs",
+              "ToolTip": "C:\\Users\\honor magicbook\\Desktop\\Whisper Music\\Animations\\AnimExtentions.cs",
+              "RelativeToolTip": "Animations\\AnimExtentions.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAAABwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T15:43:44.093Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\honor magicbook\\Desktop\\Whisper Music\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "C:\\Users\\honor magicbook\\Desktop\\Whisper Music\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-13T15:29:29.183Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\honor magicbook\\Desktop\\Whisper Music\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\honor magicbook\\Desktop\\Whisper Music\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAAwA8AAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T19:21:21.683Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
