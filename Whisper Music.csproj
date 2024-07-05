@@ -98,7 +98,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Resourses\Profile Pic %281%29.png" />
+    <Resource Include="Resourses\Profile Pic.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Resourses\BG.png" />
     <Resource Include="Resourses\Close.png" />

@@ -7,13 +7,52 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Background="#FF1C1C1C" WindowStartupLocation="CenterScreen" WindowStyle="None" MinWidth="680" MinHeight="370" WindowState="Maximized">
     <Window.Resources>
+        <Style TargetType="Button" x:Key="B_RedFocus">
+            <Setter Property="Background" Value="#66E36666"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="LightCoral"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="DarkRed"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
         <Style TargetType="Button">
-            <Setter Property="Background" Value="LightGray" />
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="Yellow" />
-                </Trigger>
-            </Style.Triggers>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border"
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#66FFFFFF"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#66FFFFFF"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
     </Window.Resources>
 
@@ -35,20 +74,26 @@
                     <ColumnDefinition Width="2*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
-                    <Button BorderBrush="{x:Null}" Width="20" Height="20" Click="Minimize">
-                        <Button.Background>
-                            <ImageBrush ImageSource="/Resourses/Hide.png"/>
-                        </Button.Background>
+                    <Button BorderBrush="{x:Null}" Width="25" Height="25" Click="Minimize">
+                        <Button.Content>
+                            <Grid>
+                                <Image Source="/Resourses/Hide.png"/>
+                            </Grid>
+                        </Button.Content>
                     </Button>
-                    <Button BorderBrush="{x:Null}" Width="20" Height="20" Click="Button_Click_2">
-                        <Button.Background>
-                            <ImageBrush ImageSource="/Resourses/Win.png"/>
-                        </Button.Background>
+                    <Button BorderBrush="{x:Null}" Width="25" Height="25" Click="Button_Click_2">
+                        <Button.Content>
+                            <Grid>
+                                <Image Source="/Resourses/Win.png"/>
+                            </Grid>
+                        </Button.Content>
                     </Button>
-                    <Button BorderBrush="{x:Null}" Width="20" Height="20" Click="Close">
-                        <Button.Background>
-                            <ImageBrush ImageSource="/Resourses/Close.png" Stretch="Fill"/>
-                        </Button.Background>
+                    <Button BorderBrush="{x:Null}" Width="25" Height="25" Click="Close" Style="{StaticResource B_RedFocus}">
+                        <Button.Content>
+                            <Grid>
+                                <Image Source="/Resourses/Close.png"/>
+                            </Grid>
+                        </Button.Content>
                     </Button>
                 </StackPanel>
             </Grid>
@@ -64,12 +109,25 @@
                 <RowDefinition Height="55"></RowDefinition>
                 <RowDefinition Height="55"></RowDefinition>
                 <RowDefinition Height="55*"></RowDefinition>
-                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="45"></RowDefinition>
             </Grid.RowDefinitions>
-            <TextBlock Grid.Row="1" Text="Главная" Foreground="White" TextAlignment="Center" FontFamily="Bahnschrift Condensed" TextWrapping="Wrap" FontSize="24" Margin="0,10"></TextBlock>
-            <TextBlock Grid.Row="2" Text="Понравившиеся" Foreground="White" TextAlignment="Center" FontFamily="Bahnschrift Condensed" TextWrapping="Wrap" FontSize="24" Margin="0,10"></TextBlock>
-            <TextBlock Grid.Row="3" Text="Добавить трек" Foreground="White" TextAlignment="Center" FontFamily="Bahnschrift Condensed" TextWrapping="Wrap" FontSize="24" Margin="0,10"></TextBlock>
-            <TextBlock Grid.Row="4" Text="Плейлисты" Foreground="White" TextAlignment="Center" FontFamily="Bahnschrift Condensed" TextWrapping="Wrap" FontSize="24" Margin="0,10"></TextBlock>
+            <Button Grid.Row="1" Content="Главная" Foreground="White" FontFamily="Bahnschrift Condensed" FontSize="24" Background="Transparent" BorderBrush="{x:Null}"></Button>
+            <Button Grid.Row="2" Content="Понравившиеся" Foreground="White" FontFamily="Bahnschrift Condensed" FontSize="24" Background="Transparent" BorderBrush="{x:Null}"></Button>
+            <Button Grid.Row="3" Content="Добавить трек" Foreground="White" FontFamily="Bahnschrift Condensed" FontSize="24" Background="Transparent" BorderBrush="{x:Null}"></Button>
+            <Button Grid.Row="4" Content="Плейлисты" Foreground="White" FontFamily="Bahnschrift Condensed" FontSize="24" Background="Transparent" BorderBrush="{x:Null}"></Button>
+            <Button Grid.Row="6">
+                <Button.Content>
+                    <StackPanel Orientation="Horizontal" Width="190">
+                        <Image Source="/Resourses/Profile pic (1).png" Width="30" Height="35"/>
+                        <TextBlock Width="5"></TextBlock>
+                        <StackPanel>
+                            <TextBlock Foreground="White" FontFamily="Arial Black" Text="  Your Profile" FontSize="14"></TextBlock>
+                            <TextBlock Foreground="White" FontFamily="Arial" Text=" Id" FontSize="12"></TextBlock>
+                        </StackPanel>
+                        
+                    </StackPanel>
+                </Button.Content>
+            </Button>
         </Grid>
 
         <Grid Grid.Row="2" Grid.ColumnSpan="2" Background="#FF232323">
@@ -77,16 +135,34 @@
                 <ColumnDefinition Width="150"></ColumnDefinition>
                 <ColumnDefinition Width="60*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            
-            <Grid Width="150" Height="auto">
+
+            <Grid Width="140" Height="auto">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="20*"></ColumnDefinition>
                     <ColumnDefinition  Width="20*"></ColumnDefinition>
                     <ColumnDefinition Width="20*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Image MinWidth="12" Source="/Resourses/Pre.png" Height="auto" Grid.Column="0"  MaxWidth="22" Margin="0,2,0,2"></Image>
-                <Image Source="/Resourses/Play.png" Height="auto" MinWidth="12" Grid.Column="1" MaxWidth="22" Margin="0,2,0,2"/>
-                <Image MinWidth="12" Source="/Resourses/Next.png" Height="auto" Grid.Column="2" MaxWidth="22" Margin="0,2,0,2"></Image>
+                <Button Grid.Column="0" BorderBrush="{x:Null}">
+                    <Button.Content>
+                        <Grid>
+                            <Image Source="/Resourses/Pre.png" MaxHeight="24"/>
+                        </Grid>
+                    </Button.Content>
+                </Button>
+                <Button Grid.Column="1" BorderBrush="{x:Null}">
+                    <Button.Content>
+                        <Grid>
+                            <Image Source="/Resourses/Play.png" MaxHeight="24"/>
+                        </Grid>
+                    </Button.Content>
+                </Button>
+                <Button Grid.Column="2" BorderBrush="{x:Null}">
+                    <Button.Content>
+                        <Grid>
+                            <Image Source="/Resourses/Next.png" MaxHeight="24"/>
+                        </Grid>
+                    </Button.Content>
+                </Button>
             </Grid>
             <Grid Grid.Column="1" Margin="10,0">
                 <Grid.ColumnDefinitions>
@@ -96,15 +172,19 @@
                     <ColumnDefinition Width="10"></ColumnDefinition>
                     <ColumnDefinition Width="10"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Button BorderBrush="{x:Null}" Margin="8,4,9,6" MinHeight="19" MaxHeight="25">
-                    <Button.Background>
-                        <ImageBrush ImageSource="/Resourses/Repeat.png" Stretch="Uniform"/>
-                    </Button.Background>
+                <Button BorderBrush="{x:Null}">
+                    <Button.Content>
+                        <Grid>
+                            <Image Source="/Resourses/Repeat.png" MaxHeight="24" MaxWidth="26"/>
+                        </Grid>
+                    </Button.Content>
                 </Button>
-                <Button BorderBrush="{x:Null}" Grid.Column="2" MaxWidth="45" MaxHeight="23" HorizontalAlignment="Left" MinWidth="30" MinHeight="18" Margin="0,1,0,2">
-                    <Button.Background>
-                        <ImageBrush ImageSource="/Resourses/Random.png"/>
-                    </Button.Background>
+                <Button BorderBrush="{x:Null}" Grid.Column="2">
+                    <Button.Content>
+                        <Grid>
+                            <Image Source="/Resourses/Random.png" MaxHeight="24"  MaxWidth="30"/>
+                        </Grid>
+                    </Button.Content>
                 </Button>
             </Grid>
         </Grid>
