@@ -119,5 +119,14 @@
     <Resource Include="Resourses\WhisperTXT.png" />
     <Resource Include="Resourses\Win.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resourses\Author.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resourses\FullHeart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resourses\Slider.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
